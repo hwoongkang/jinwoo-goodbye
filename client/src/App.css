@@ -1,0 +1,17 @@
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  /*min-width: 1024px; */
+
+  /* Set up proportionate scaling */
+  height: 100%;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.8;
+  overflow-y: auto;
+  z-index: -50;
+}
