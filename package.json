@@ -1,7 +1,15 @@
 {
-  "name": "server",
+  "name": "jinwoo-goodbye",
   "version": "0.0.0",
-  "private": true,
+  "description": "Platform to leave messages for Jinwoo",
+  "author": "Hyunwoong Kang",
+  "license": "MIT",
+  "keywords": [
+    "es6",
+    "mongoose",
+    "express",
+    "react"
+  ],
   "scripts": {
     "start": "node ./bin/www",
     "server": "nodemon ./server/bin/www.js --exec babel-node --presets @babel/preset-env --watch server/ -e js",
