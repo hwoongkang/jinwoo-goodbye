@@ -6,9 +6,9 @@ React, Express, MongoDB
 
 ## Config
 
-dotenv를 사용함
-environment variable에 MONGO_URI 필요
-(개발 환경에서 Mongo DB Atlas 활용중)
+dotenv를 사용함  
+environment variable에 MONGO_URI 필요  
+(개발 환경에서 Mongo DB Atlas 활용중)  
 @see: ./server/config/database.js
 
 ## Scripts
