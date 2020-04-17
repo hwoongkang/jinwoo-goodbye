@@ -4,11 +4,13 @@ const Background = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    /*
     const interval = setInterval(() => {
       console.log("this should show every time");
       setCount((count) => count + 1);
     }, 3000);
     return () => clearInterval(interval);
+    */
   }, []);
   const images = [
     "/images/cold.jpg",

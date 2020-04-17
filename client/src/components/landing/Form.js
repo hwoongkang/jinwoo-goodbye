@@ -32,7 +32,7 @@ const Form = () => {
     setMessage(e.target.value);
   };
   return (
-    <div>
+    <div className="msgForm">
       <p>
         <label for="message">Message</label>
       </p>
