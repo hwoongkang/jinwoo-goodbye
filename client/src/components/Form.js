@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 
 const Form = () => {
@@ -47,9 +46,6 @@ const Form = () => {
       </p>
       <p>
         <button onClick={handleSubmit}>submit</button>
-      </p>
-      <p>
-        <Link to="/list">Messages</Link>
       </p>
     </div>
   );
