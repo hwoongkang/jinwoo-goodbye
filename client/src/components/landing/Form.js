@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 
 const Form = () => {
   const [message, setMessage] = useState("");
-  const handleChange = (e) => {
-    e.preventDefault();
-    setMessage(e.target.value);
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const config = {
@@ -22,13 +18,18 @@ const Form = () => {
       .post("/api/message", body, config)
       .then((res) => {
         if (res.data.success) {
-          alert("post successfully saved");
           setMessage("");
+          alert("message posted");
         } else {
           alert("error!");
         }
       })
       .catch((err) => alert(err));
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setMessage(e.target.value);
   };
   return (
     <div>

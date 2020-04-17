@@ -1,3 +1,21 @@
+@keyframes fader {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.7;
+  }
+  26% {
+    opacity: 0.7;
+  }
+  34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
@@ -11,7 +29,19 @@ img.bg {
   top: 0;
   left: 50%;
   transform: translate(-50%);
-  opacity: 0.8;
+  opacity: 0;
   overflow-y: auto;
   z-index: -50;
+
+  animation: fader 9s linear infinite;
+}
+
+img.bg:nth-child(1) {
+  animation-delay: 0s;
+}
+img.bg:nth-child(2) {
+  animation-delay: 3s;
+}
+img.bg:nth-child(3) {
+  animation-delay: 6s;
 }
