@@ -11,7 +11,7 @@
     "react"
   ],
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./build/bin/www",
     "server": "nodemon ./server/bin/www.js --exec babel-node --presets @babel/preset-env --watch server/ -e js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
