@@ -57,6 +57,7 @@ img.bg:nth-child(2) {
 img.bg:nth-child(3) {
   animation-delay: 20s;
 }
+
 img.bg:nth-child(4) {
   animation-delay: 30s;
 }
@@ -74,19 +75,33 @@ img.bg:nth-child(7) {
 }
 
 .Story {
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 0 1rem blue, 0 0 2rem white;
+  text-shadow: 0 0 1rem magenta, 0 0 2rem white;
   position: absolute;
   top: 15%;
+  margin: 0 15%;
+  width: 70%;
+  left: 0;
 }
 
 .github {
-  margin: 5px;
+  margin: 0;
   position: absolute;
   right: 0;
   bottom: 0;
   width: 5%;
   z-index: 100;
+}
+
+.location {
+  font-size: 16px;
+  bottom: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -15;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
 }

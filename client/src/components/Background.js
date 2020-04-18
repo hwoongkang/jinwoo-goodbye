@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-const Background = () => {
-  const [count, setCount] = useState(0);
+import { connect } from "react-redux";
 
+import { increment, decrement } from "../redux/actions.js";
+
+const Background = ({ increment, decrement }) => {
   useEffect(() => {}, []);
   const images = [
     "/images/cold.jpg",
@@ -13,8 +15,23 @@ const Background = () => {
     "/images/ff-rudolf.jpg",
     "/images/soundmind.jpg",
   ];
+  const handleClick = (e) => {
+    e.preventDefault();
+    const x = e.clientX;
+    const y = e.clientY;
+    switch (true) {
+      case x < 0.3 * window.innerWidth:
+        decrement();
+        break;
+      case x > 0.7 * window.innerWidth:
+        increment();
+        break;
+      default:
+        break;
+    }
+  };
   return (
-    <div className="images">
+    <div className="images" onClick={handleClick}>
       <img src={images[0]} class="bg" />
       <img src={images[1]} class="bg" />
       <img src={images[2]} class="bg" />
@@ -26,4 +43,6 @@ const Background = () => {
   );
 };
 
-export default Background;
+const mapStateToProps = (state) => ({});
+
+export default connect(mapStateToProps, { increment, decrement })(Background);

@@ -20,7 +20,7 @@
     "transpile": "babel server -d build --presets @babel/preset-env",
     "build:server": "npm-run-all clean transpile",
     "build:client": "npm run build --prefix client",
-    "build": "npm-run-all build:server build:client"
+    "build": "npm-run-all install:client build:server build:client"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

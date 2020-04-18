@@ -1,29 +1,13 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { connect } from "react-redux";
+import { postMessage } from "../redux/actions.js";
+import store from "../redux/store.js";
 
 const Form = () => {
   const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const body = {
-      message,
-    };
-    axios
-      .post("/api/message", body, config)
-      .then((res) => {
-        if (res.data.success) {
-          setMessage("");
-          alert("message posted");
-        } else {
-          alert("error!");
-        }
-      })
-      .catch((err) => alert(err));
+    store.dispatch(postMessage(message));
   };
 
   const handleChange = (e) => {
@@ -79,4 +63,6 @@ const Form = () => {
   );
 };
 
-export default Form;
+const mapStateToProps = (state) => ({});
+
+export default connect(mapStateToProps, { postMessage })(Form);
