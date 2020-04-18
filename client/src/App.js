@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-import Form from "./components/Form.js";
-import Background from "./components/Background.js";
-import Messages from "./components/Messages";
-
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/CandyCrush.js";
+    script.type = "paperscript";
+    script.async = true;
+    document.head.appendChild(script);
+    return () => document.head.removeChild(script);
+  });
   return (
     <div className="App">
-      <Form count={1} />
-      <Background />
-      <Messages />
+      <canvas id="myCanvas"></canvas>
     </div>
   );
 }
