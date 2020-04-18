@@ -38,6 +38,12 @@ img.bg {
   z-index: -50;
 
   animation: fader 9s linear infinite;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 img.bg:nth-child(1) {
