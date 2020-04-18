@@ -33,19 +33,42 @@ const Form = () => {
   return (
     <div>
       <p>
-        <label for="message">Message</label>
-      </p>
-      <p>
         <textarea
           name="message"
-          cols="80"
-          rows="10"
           value={message}
           onChange={handleChange}
+          style={{
+            padding: "3%",
+            width: "54%",
+            left: "20%",
+            top: "65%",
+            height: "10%",
+            fontSize: "20px",
+            resize: "none",
+            position: "absolute",
+            background:
+              "radial-gradient(rgba(255,255,255,1),rgba(255,255,255,0.2))",
+
+            zIndex: 5,
+            borderRadius: "10px",
+          }}
+          placeholder="고생한 진우에게 한 마디 남겨주세요!"
         />
       </p>
       <p>
-        <button onClick={handleSubmit}>submit</button>
+        <button
+          onClick={handleSubmit}
+          style={{
+            position: "absolute",
+            top: "85%",
+            height: "20px",
+            left: "30%",
+            marginLeft: 0,
+            width: "40%",
+          }}
+        >
+          보내기
+        </button>
       </p>
     </div>
   );

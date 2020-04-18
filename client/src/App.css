@@ -3,15 +3,15 @@
     opacity: 0;
   }
 
-  8% {
-    opacity: 0.65;
+  3% {
+    opacity: 0.85;
   }
 
-  26% {
-    opacity: 0.65;
+  12% {
+    opacity: 0.85;
   }
 
-  34% {
+  15% {
     opacity: 0;
   }
 
@@ -37,7 +37,7 @@ img.bg {
   overflow-y: auto;
   z-index: -50;
 
-  animation: fader 9s linear infinite;
+  animation: fader 28s linear infinite;
 
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -51,9 +51,33 @@ img.bg:nth-child(1) {
 }
 
 img.bg:nth-child(2) {
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 img.bg:nth-child(3) {
-  animation-delay: 6s;
+  animation-delay: 8s;
+}
+img.bg:nth-child(4) {
+  animation-delay: 12s;
+}
+
+img.bg:nth-child(5) {
+  animation-delay: 16s;
+}
+
+img.bg:nth-child(6) {
+  animation-delay: 20s;
+}
+
+img.bg:nth-child(7) {
+  animation-delay: 24s;
+}
+
+.Story {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 1rem blue, 0 0 2rem white;
+  position: absolute;
+  top: 15%;
 }

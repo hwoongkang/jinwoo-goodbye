@@ -33,7 +33,7 @@ const fade = {
   transform: "translate(-50%)",
   zIndex: 50,
   backgroundColor: "black",
-  opacity: 0.6,
+  opacity: 0.5,
 };
 
 const Instruction = () => {
@@ -46,6 +46,32 @@ const Instruction = () => {
   const component = shouldShow ? (
     <div className="instruction" style={style} onClick={toggleShow}>
       <div className="fade" style={fade}></div>
+      <div
+        className="tap left"
+        style={{
+          position: "absolute",
+          textAlign: "left",
+          left: "10%",
+          fontSize: "20px",
+          top: "10%",
+        }}
+      >
+        {"\u2193 왼쪽을 탭해 이전 메시지를 보실 수 있어요"}
+      </div>
+      <div
+        className="tap right"
+        style={{
+          position: "absolute",
+          textAlign: "right",
+          left: "10%",
+          margin: 0,
+          width: "80%",
+          top: "25%",
+          fontSize: "20px",
+        }}
+      >
+        {"오른쪽을 탭해 다음 메시지를 보실 수 있어요 \u2191"}
+      </div>
     </div>
   ) : null;
   return component;
