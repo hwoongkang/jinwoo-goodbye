@@ -81,3 +81,12 @@ img.bg:nth-child(7) {
   position: absolute;
   top: 15%;
 }
+
+.github {
+  margin: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5%;
+  z-index: 100;
+}
