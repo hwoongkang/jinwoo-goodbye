@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 export const Location = ({ ind, messages }) => {
   return (
     <div className="location">
-      {ind} / {messages.length}
+      {ind + 1} / {messages.length}
     </div>
   );
 };
