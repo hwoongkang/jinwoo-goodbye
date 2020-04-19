@@ -1,6 +1,6 @@
 import { types } from "./actions.js";
 
-export const initialState = {
+const initialState = {
   ind: 0,
   messages: [],
   messageLoading: false,

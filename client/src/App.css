@@ -91,7 +91,7 @@ img.bg:nth-child(7) {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 5%;
+  width: 30px;
   z-index: 100;
 }
 
@@ -104,4 +104,35 @@ img.bg:nth-child(7) {
   margin-bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+textarea {
+  padding: 5px;
+  top: 65%;
+  height: 15%;
+  width: 60%;
+  margin: 0;
+  left: calc(20% - 5px);
+  font-size: 20px;
+  resize: none;
+  position: absolute;
+  background:
+    radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
+
+  z-index: 5;
+  border-radius: 10px;
+}
+
+@media (max-width:800px) and (min-width:0px) {
+  .Story {
+    font-size: 25px;
+  }
+
+  textarea {
+    font-size: 15px;
+  }
+
+  .github {
+    width: 3%;
+  }
 }

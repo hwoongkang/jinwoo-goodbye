@@ -18,7 +18,6 @@ const Background = ({ increment, decrement }) => {
   const handleClick = (e) => {
     e.preventDefault();
     const x = e.clientX;
-    const y = e.clientY;
     switch (true) {
       case x < 0.3 * window.innerWidth:
         decrement();
@@ -32,13 +31,13 @@ const Background = ({ increment, decrement }) => {
   };
   return (
     <div className="images" onClick={handleClick}>
-      <img src={images[0]} class="bg" />
-      <img src={images[1]} class="bg" />
-      <img src={images[2]} class="bg" />
-      <img src={images[3]} class="bg" />
-      <img src={images[4]} class="bg" />
-      <img src={images[5]} class="bg" />
-      <img src={images[6]} class="bg" />
+      <img alt="0번째 진우사진" src={images[0]} class="bg" />
+      <img alt="1번째 진우사진" src={images[1]} class="bg" />
+      <img alt="2번째 진우사진" src={images[2]} class="bg" />
+      <img alt="3번째 진우사진" src={images[3]} class="bg" />
+      <img alt="4번째 진우사진" src={images[4]} class="bg" />
+      <img alt="5번째 진우사진" src={images[5]} class="bg" />
+      <img alt="6번째 진우사진" src={images[6]} class="bg" />
     </div>
   );
 };

@@ -21,22 +21,6 @@ const Form = () => {
           name="message"
           value={message}
           onChange={handleChange}
-          style={{
-            padding: "5px",
-            top: "65%",
-            height: "15%",
-            width: "60%",
-            margin: "0",
-            left: "calc(20% - 5px)",
-            fontSize: "20px",
-            resize: "none",
-            position: "absolute",
-            background:
-              "radial-gradient(rgba(255,255,255,1),rgba(255,255,255,0.8))",
-
-            zIndex: 5,
-            borderRadius: "10px",
-          }}
           placeholder={"고생한 진우에게\n한 마디 남겨주세요!"}
         />
       </p>
